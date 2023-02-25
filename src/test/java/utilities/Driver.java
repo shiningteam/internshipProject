@@ -19,6 +19,7 @@ import java.util.NoSuchElementException;
 public class Driver {
     //create a driver instance
     private static WebDriver driver;
+
     private static int timeout = 5;
 
     private Driver(){
