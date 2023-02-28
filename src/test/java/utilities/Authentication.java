@@ -16,7 +16,7 @@ public class Authentication {
     public static RequestSpecification spec;
 
     public static String generateToken(String username, String password){
-        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
+        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("medunna_url")).build();
 
         //Set the base url
         //api/authenticate
