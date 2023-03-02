@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="79.523" tests="9" skipped="0" failures="0" errors="0">
-<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.1" time="12.891">
+<testsuite name="Cucumber" time="86.744" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.1" time="16.398">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "AdminTeam01" and "Team01+"................passed
 Then Assert that login successful...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.2" time="7.536">
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.2" time="7.572">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "ShiningPhysician" and "Shiningphysician1".passed
@@ -21,21 +21,21 @@ And User tries to login entering "shiningtakım" and "shteam123".............pas
 Then Assert that login successful...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.4" time="7.487">
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.4" time="7.506">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "shiningteamm" and "shteam111".............passed
 Then Assert that login successful...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.5" time="7.501">
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.5" time="7.464">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "shiningtakım" and "shteam111".............passed
 Then Assert that login successful...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="login_cancel_scenario - test_data - Example #1.1" time="7.503">
+<testcase classname="Login_feature" name="login_cancel_scenario - test_data - Example #1.1" time="7.602">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "AdminTeam01" and "shteam123"..............passed
@@ -43,7 +43,7 @@ And cliks cancel button.....................................................pass
 Then Assert that cancel successful..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="login_cancel_scenario - test_data - Example #1.2" time="7.715">
+<testcase classname="Login_feature" name="login_cancel_scenario - test_data - Example #1.2" time="7.552">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "shiningtakım" and "shteam111".............passed
@@ -51,7 +51,7 @@ And cliks cancel button.....................................................pass
 Then Assert that cancel successful..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="navigating_registeration_page_scenario - test_data - Example #1.1" time="7.954">
+<testcase classname="Login_feature" name="navigating_registeration_page_scenario - test_data - Example #1.1" time="7.935">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "shiningtakım" and "shteam111".............passed
@@ -61,7 +61,7 @@ Then Assert that navigation to registration page successful.................pass
 Then close application......................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login_feature" name="navigating_registeration_page_scenario - test_data - Example #1.2" time="13.21">
+<testcase classname="Login_feature" name="navigating_registeration_page_scenario - test_data - Example #1.2" time="16.961">
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "shininghasta" and "shteam103".............passed

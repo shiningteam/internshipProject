@@ -1,5 +1,6 @@
 package pages;
 
+
         import org.junit.Assert;
         import org.openqa.selenium.WebElement;
         import org.openqa.selenium.support.FindBy;
@@ -27,9 +28,19 @@ public class SignInPage {
     public WebElement cancelButton;
 
     @FindBy(xpath = "//*[contains(text(),'Sign in')]")
-    public WebElement signInButton;
+    public WebElement signinButton;
 
     @FindBy(id="account-menu")
     public WebElement userAccount;
+
+
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement usernameInput;
+
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement passwordInput;
+
+    @FindBy(xpath = "//button//span[.='Sign in']")
+    public WebElement signInButton;
 
 }
