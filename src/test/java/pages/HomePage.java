@@ -15,4 +15,6 @@ public class HomePage {
 
     @FindBy (xpath = "//span[contains(text(),'Register')]")
     public WebElement homePageDropDownRegisterButton;
+
+
 }

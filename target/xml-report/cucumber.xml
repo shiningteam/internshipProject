@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.617" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Appointment Validation" name="TC08_Get_Request" time="2.507">
+<testsuite name="Cucumber" time="386.732" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="Username and email address" name="TC_01 Register with valid username and email address" time="26.494">
 <system-out><![CDATA[
-Given user sends GET request for the appointment............................passed
-Then user validates the appointment.........................................passed
+Given User goes to homepage.................................................passed
+When Click "register" button................................................passed
+Then Enter valid username "mervemermer2023" with letters and numbers........passed
+And Enter valid email address "mervemermer@gmail.com".......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Username and email address" name="TC_03 Register fails if username is blank" time="75.997">
+<system-out><![CDATA[
+Given User goes to homepage.................................................passed
+When Click "register" button................................................passed
+Then Leave username box blank...............................................passed
+And Enter valid email address "mervemermer@gmail.com".......................passed
+And Assert that username is not accepted....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Username and email address" name="TC_03 Register fails with invalid email address - Example #1.1" time="70.881">
+<system-out><![CDATA[
+Given User goes to homepage.................................................passed
+When Click "register" button................................................passed
+Then Enter invalid "mervemermer@gmailcom"...................................passed
+And Assert that email is not accepted.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Username and email address" name="TC_03 Register fails with invalid email address - Example #1.2" time="70.979">
+<system-out><![CDATA[
+Given User goes to homepage.................................................passed
+When Click "register" button................................................passed
+Then Enter invalid "mervemermer"............................................passed
+And Assert that email is not accepted.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Username and email address" name="TC_03 Register fails with invalid email address - Example #1.3" time="70.786">
+<system-out><![CDATA[
+Given User goes to homepage.................................................passed
+When Click "register" button................................................passed
+Then Enter invalid "mervemermergmail.com"...................................passed
+And Assert that email is not accepted.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Username and email address" name="TC_07 Register fails if email address is blank" time="71.304">
+<system-out><![CDATA[
+Given User goes to homepage.................................................passed
+When Click "register" button................................................passed
+Then Leave email address box  blank.........................................passed
+And Assert that user gets error message.....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
