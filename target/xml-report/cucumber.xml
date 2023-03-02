@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="386.732" tests="6" skipped="0" failures="0" errors="0">
 <testcase classname="Username and email address" name="TC_01 Register with valid username and email address" time="26.494">
 <system-out><![CDATA[
@@ -49,6 +50,9 @@ When Click "register" button................................................pass
 Then Leave email address box  blank.........................................passed
 And Assert that user gets error message.....................................passed
 =======
+=======
+<<<<<<< Updated upstream
+>>>>>>> master
 <testsuite name="Cucumber" time="86.744" tests="9" skipped="0" failures="0" errors="0">
 <testcase classname="Login_feature" name="login_scenario - test_data - Example #1.1" time="16.398">
 <system-out><![CDATA[
@@ -58,6 +62,30 @@ Then Assert that login successful...........................................pass
 ]]></system-out>
 </testcase>
 <testcase classname="Login_feature" name="login_scenario - test_data - Example #1.2" time="7.572">
+=======
+<testsuite name="Cucumber" time="41.891" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="US_12" name="US012_TC01 - data - Example #1.1" time="19.003">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.UIStepDefinitions.US_012.verify_user_see_patiet_s_id_such_as(US_012.java:52)
+	at ✽.Verify user see patiet's id such as "10566","03.04.2023","03.04.2023","COMPLETED","ShiningPhysician"(file:///C:/Users/semra/IdeaProjects/internshipProject/./src/test/resources/features/UIFeatures/US_012.feature:11)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Go to home page and sign in...........................................passed
+And User clicks on MY PAGES dropdown and select My Appointments option......passed
+And Click on edit button....................................................passed
+And Verify user see patiet's id such as "10566","03.04.2023","03.04.2023","COMPLETED","ShiningPhysician".failed
+And User types in required fields...........................................skipped
+Then Verify the required fields can be typed................................skipped
+Then close the application..................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="US_12" name="US012_TC02" time="22.474">
+>>>>>>> Stashed changes
 <system-out><![CDATA[
 Given User goes to home page................................................passed
 And User tries to login entering "ShiningPhysician" and "Shiningphysician1".passed
