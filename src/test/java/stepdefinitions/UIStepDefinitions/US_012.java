@@ -23,6 +23,7 @@ public class US_012 {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
         homePage.userButton.click();
         homePage.homePageSignInButton.click();
+        ReusableMethods.waitFor(2);
         signInPage.usernameInput.sendKeys(ConfigReader.getProperty("physician_username"));
         signInPage.passwordInput.sendKeys(ConfigReader.getProperty("physician_password"));
         signInPage.signInButton.click();
@@ -37,7 +38,6 @@ public class US_012 {
     @Given("Click on edit button")
     public void click_on_edit_button() {
         physicianMyAppointmentPage.editButton.click();
-        System.out.println(physicianMyAppointmentPage.idInput.getText());
     }
     @Given("Verify user see patiet's id such as {string},{string},{string},{string},{string}")
     public void verify_user_see_patiet_s_id_such_as(String string, String string2, String string3, String string4, String string5) throws IOException {
@@ -49,7 +49,7 @@ public class US_012 {
         JSUtils.scrollDownByJS();
         JSUtils.scrollDownByJS();
         ReusableMethods.getScreenshot("Patient's physician");
-
+        Assert.assertTrue(physicianMyAppointmentPage.idInput.getText().contains(string));
 //        Assert.assertTrue(physicianMyAppointmentPage.startDateInput.getText().contains(string2));
 //        Assert.assertTrue(physicianMyAppointmentPage.endDateInput.getText().contains(string3));
 //        Assert.assertTrue(physicianMyAppointmentPage.statusInput.getText().contains(string4));
@@ -59,10 +59,13 @@ public class US_012 {
     public void user_types_in_required_fields() {
         Select select=new Select(physicianMyAppointmentPage.statusInput);
         select.selectByVisibleText("COMPLETED");
+        ReusableMethods.waitFor(2);
         physicianMyAppointmentPage.anamnesisInput.clear();
         physicianMyAppointmentPage.anamnesisInput.sendKeys("Itching occurred 2 years ago");
+        ReusableMethods.waitFor(1);
         physicianMyAppointmentPage.treatmentInput.clear();
         physicianMyAppointmentPage.treatmentInput.sendKeys("Should stay away from the sun and use the ointment provided.");
+        ReusableMethods.waitFor(1);
         physicianMyAppointmentPage.diagnosisInput.clear();
         physicianMyAppointmentPage.diagnosisInput.sendKeys("Eczema");
         ReusableMethods.waitFor(2);
