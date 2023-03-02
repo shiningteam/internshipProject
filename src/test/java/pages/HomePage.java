@@ -13,8 +13,16 @@ public class HomePage {
     @FindBy (id = "account-menu")
     public WebElement userButton;
 
+    @FindBy (id="login-item")
+    public WebElement loginButton;
+
     @FindBy (xpath = "//span[contains(text(),'Register')]")
     public WebElement homePageDropDownRegisterButton;
 
+<<<<<<< HEAD
 
+=======
+    @FindBy(xpath = "//span[contains(text(),'Sign in')]")
+    public WebElement homePageSignInButton;
+>>>>>>> master
 }

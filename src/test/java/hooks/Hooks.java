@@ -6,7 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
-import static base_URL.MedunnaBaseUrl.medunnaSetUp;
+import static baseurl.MedunnaBaseUrl.medunnaSetUp;
 
 public class Hooks {
     /*

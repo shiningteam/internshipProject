@@ -12,7 +12,7 @@ import utilities.pojos.US_08_Pojo;
 import java.util.HashMap;
 import java.util.Map;
 
-import static base_URL.MedunnaBaseUrl.spec;
+import static baseurl.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static utilities.Authentication.generateToken;

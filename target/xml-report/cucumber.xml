@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="386.732" tests="6" skipped="0" failures="0" errors="0">
 <testcase classname="Username and email address" name="TC_01 Register with valid username and email address" time="26.494">
 <system-out><![CDATA[
@@ -47,6 +48,78 @@ Given User goes to homepage.................................................pass
 When Click "register" button................................................passed
 Then Leave email address box  blank.........................................passed
 And Assert that user gets error message.....................................passed
+=======
+<testsuite name="Cucumber" time="86.744" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.1" time="16.398">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "AdminTeam01" and "Team01+"................passed
+Then Assert that login successful...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.2" time="7.572">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "ShiningPhysician" and "Shiningphysician1".passed
+Then Assert that login successful...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.3" time="7.456">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "shiningtakım" and "shteam123".............passed
+Then Assert that login successful...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.4" time="7.506">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "shiningteamm" and "shteam111".............passed
+Then Assert that login successful...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="login_scenario - test_data - Example #1.5" time="7.464">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "shiningtakım" and "shteam111".............passed
+Then Assert that login successful...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="login_cancel_scenario - test_data - Example #1.1" time="7.602">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "AdminTeam01" and "shteam123"..............passed
+And cliks cancel button.....................................................passed
+Then Assert that cancel successful..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="login_cancel_scenario - test_data - Example #1.2" time="7.552">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "shiningtakım" and "shteam111".............passed
+And cliks cancel button.....................................................passed
+Then Assert that cancel successful..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="navigating_registeration_page_scenario - test_data - Example #1.1" time="7.935">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "shiningtakım" and "shteam111".............passed
+And Assert that login successful............................................passed
+And User navigates registration page........................................passed
+Then Assert that navigation to registration page successful.................passed
+Then close application......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_feature" name="navigating_registeration_page_scenario - test_data - Example #1.2" time="16.961">
+<system-out><![CDATA[
+Given User goes to home page................................................passed
+And User tries to login entering "shininghasta" and "shteam103".............passed
+And Assert that login successful............................................passed
+And User navigates registration page........................................passed
+Then Assert that navigation to registration page successful.................passed
+Then close application......................................................passed
+>>>>>>> master
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -14,7 +14,13 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US002_Merve"
+
+
+
+        tags = "@Login"
+
+
+
 )
 public class Runner {
 }
