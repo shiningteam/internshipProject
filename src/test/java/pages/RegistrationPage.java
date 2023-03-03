@@ -49,6 +49,26 @@ public class RegistrationPage {
     @FindBy(linkText = "Your email is required." )
     public WebElement emailRequired;
 
+    @FindBy (id= "ssn")
+    public WebElement ssnBox;
+
+    @FindBy (id= "firstName")
+    public WebElement firstNameBox;
+
+    @FindBy(id="lastName")
+    public WebElement lastNameBox;
+
+    @FindBy(id="username")
+    public WebElement userNameBox;
+
+    @FindBy(id="email")
+    public WebElement emailBox;
+
+    @FindBy(id="register-submit")
+    public WebElement registerButton;
+
+
+
     @FindBy(linkText = "This field is invalid" )
     public WebElement emailInvalid;
 
