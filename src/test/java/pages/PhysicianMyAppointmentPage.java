@@ -57,6 +57,20 @@ public class PhysicianMyAppointmentPage {
     @FindBy(xpath = "(//td[.='123456789'])[2]")
     public WebElement descriptionField;
 
+    @FindBy(linkText = "Request A Test")
+    public WebElement requestTestButton;
+
+    @FindBy(xpath = "//a[@class='btn btn-danger btn-sm']")
+    public WebElement showTestResults;
+
+    @FindBy(xpath = "//button[contains(text(),'Request Inpatient')]")
+    public WebElement requestInpatientButton;
+
+    @FindBy(xpath = "//span[contains(text(),'My Inpatients')]")
+    public WebElement myInpatientsButton;
+
+    @FindBy(xpath = "//a[contains(text(),'777-77-7777:ShiningPatient Team')]")
+    public WebElement patientSsn;
 
 }
 
