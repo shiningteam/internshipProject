@@ -19,10 +19,7 @@ public class HomePage {
     @FindBy (xpath = "//span[contains(text(),'Register')]")
     public WebElement homePageDropDownRegisterButton;
 
-<<<<<<< HEAD
-
-=======
     @FindBy(xpath = "//span[contains(text(),'Sign in')]")
     public WebElement homePageSignInButton;
->>>>>>> master
+
 }
