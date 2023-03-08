@@ -19,6 +19,10 @@ public class HomePage {
     @FindBy (xpath = "//span[contains(text(),'Register')]")
     public WebElement homePageDropDownRegisterButton;
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     @FindBy(xpath = "//span[contains(text(),'Sign in')]")
     public WebElement homePageSignInButton;
 
