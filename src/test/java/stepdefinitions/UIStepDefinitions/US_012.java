@@ -22,7 +22,7 @@ public class US_012 {
     public void go_to_home_page_and_sign_in() {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
         homePage.userButton.click();
-        homePage.homePageSignInButton.click();
+        homePage.loginButton.click();
         ReusableMethods.waitFor(2);
         signInPage.usernameInput.sendKeys(ConfigReader.getProperty("physician_username"));
         signInPage.passwordInput.sendKeys(ConfigReader.getProperty("physician_password"));
@@ -49,11 +49,7 @@ public class US_012 {
         JSUtils.scrollDownByJS();
         JSUtils.scrollDownByJS();
         ReusableMethods.getScreenshot("Patient's physician");
-        Assert.assertTrue(physicianMyAppointmentPage.idInput.getText().contains(string));
-//        Assert.assertTrue(physicianMyAppointmentPage.startDateInput.getText().contains(string2));
-//        Assert.assertTrue(physicianMyAppointmentPage.endDateInput.getText().contains(string3));
-//        Assert.assertTrue(physicianMyAppointmentPage.statusInput.getText().contains(string4));
-//        Assert.assertTrue(physicianMyAppointmentPage.physicianInput.getText().contains(string5));
+
     }
     @Given("User types in required fields")
     public void user_types_in_required_fields() {

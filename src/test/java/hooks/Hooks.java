@@ -18,8 +18,9 @@ public class Hooks {
         if (scenario.isFailed()){//capturing the screenshot when a sceraio fails and attaching it to the report
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(failedScreenshot,"image/png","failed_scenario"+scenario.getName()+"");
-            Driver.closeDriver();
+
         }
+        Driver.closeDriver();
     }
 
     @Before("@smoke_tests")
