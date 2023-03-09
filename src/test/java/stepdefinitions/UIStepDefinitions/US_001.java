@@ -13,6 +13,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_001 {
+
     HomePage homePage = new HomePage();
     RegistrationPage registrationPage = new RegistrationPage();
 
@@ -21,6 +22,7 @@ public class US_001 {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
     }
 
+
     @When("Click Register button")
     public void click_register_button() {
         homePage.homePageDropDownRegisterButton.click();
@@ -28,7 +30,8 @@ public class US_001 {
 
 
     @Then("User enters {string}")
-    public void ssn_bar() {
+    public void ssn_bar(String string) {
+
         registrationPage.ssnBox.click();
         ReusableMethods.waitFor(2);
         Faker faker = new Faker();
@@ -39,50 +42,66 @@ public class US_001 {
         Assert.assertTrue(elementText.contains("-"));
 
     }
+    @Then("user enters {string}")
+    public void firstNameBox(String string) {
 
-    @Then("User enters {string}")
-    public void firstNameBox() {
-        registrationPage.lastNameBox.click();
+        registrationPage.firstNameBox.click();
         Faker fakername = new Faker();
         registrationPage.firstNameBox.sendKeys(fakername.name().firstName());
-    }
 
-    @Then("User enters {string}")
-    public void lastName() {
+    }
+    @Then("user enters {string}")
+    public void lastNameBox(String string) {
+
         registrationPage.lastNameBox.click();
-        Faker fakerLastname = new Faker();
-        registrationPage.lastNameBox.sendKeys(fakerLastname.name().lastName());
-    }
+        Faker fakerlname = new Faker();
+        registrationPage.firstNameBox.sendKeys(fakerlname.name().lastName());
 
-    @Then("User enters {string}")
-    public void userName() {
+    }
+    @Then("user enters {string}")
+    public void username(String string) {
+
         registrationPage.userNameBox.click();
-        Faker fakerUsername = new Faker();
-        registrationPage.userNameBox.sendKeys(fakerUsername.name().username());
+        Faker fakeruname = new Faker();
+        registrationPage.userNameBox.sendKeys(fakeruname.name().username());
+
     }
 
     @Then("user enters {string}")
-    public void email() {
+    public void email(String string) {
+
         registrationPage.emailBox.click();
-        Faker fakerEmail = new Faker();
-        registrationPage.emailBox.sendKeys(fakerEmail.internet().emailAddress());
+        Faker fakeremail = new Faker();
+        registrationPage.firstNameBox.sendKeys(fakeremail.internet().emailAddress());
+
     }
 
-    @Then("User enters {string}")
-    public void userEntersSevenDigitWithAtLeastOneUppercaseOneLowercaseOneDigitAndOneSpecialChar(String arg0) {
-        registrationPage.newPassword.sendKeys(arg0);
+    @Then("user enters {string}")
+    public void password(String string) {
+
+        registrationPage.newPassword.click();
+        Faker fakerp = new Faker();
+        registrationPage.firstNameBox.sendKeys(fakerp.internet().password());
     }
+
 
     @Then("user confirms {string}")
-    public void userConfirmsPasswords(String arg0) {
-        registrationPage.passwordConfirm.sendKeys(arg0);
+    public void user_confirms(String string) {
+        registrationPage.passwordConfirm.click();
+        Faker fakerp= new Faker();
+        registrationPage.passwordConfirm.sendKeys(fakerp.internet().password());
+
     }
-
-
-    @Then(("user clicks {string}"))
-    public void registrationButton(){
+    @Then("user clicks {string}")
+    public void user_clicks(String string) {
         registrationPage.registerButton.click();
     }
+
+    @Then("user asserts the registration is succesfull")
+    public void user_asserts_the_registration_is_succesfull() {
+      registrationPage.registrationSaved.isDisplayed();
+    }
+
 
 
 
