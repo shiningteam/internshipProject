@@ -33,12 +33,7 @@ public class US_001 {
     }
 
 
-<<<<<<< Updated upstream
-    @Then("User enters {string}")
-    public void ssn_bar() {
-        registrationPage.ssnBox.click();
-=======
-    @Then("user confirms {string}")
+       @Then("user confirms {string}")
     public void userConfirmsPasswords(String arg0) {
         registrationPage.passwordConfirm.sendKeys(arg0);
     }
@@ -47,7 +42,6 @@ public class US_001 {
 
     @Then("User enters SSN")
     public void userEntersSSN() {
->>>>>>> Stashed changes
         ReusableMethods.waitFor(2);
 
         int randomNumber3 = faker.number().numberBetween(100, 999);
@@ -55,57 +49,6 @@ public class US_001 {
         registrationPage.ssnBox.sendKeys(randomNumber3 + "-" + randomNumber2 + "-" + randomNumber3);
         String elementText = registrationPage.ssnBox.getText();
         Assert.assertTrue(elementText.contains("-"));
-<<<<<<< Updated upstream
-
-    }
-
-    @Then("User enters {string}")
-    public void firstNameBox() {
-        registrationPage.lastNameBox.click();
-        Faker fakername = new Faker();
-        registrationPage.firstNameBox.sendKeys(fakername.name().firstName());
-    }
-
-    @Then("User enters {string}")
-    public void lastName() {
-        registrationPage.lastNameBox.click();
-        Faker fakerLastname = new Faker();
-        registrationPage.lastNameBox.sendKeys(fakerLastname.name().lastName());
-    }
-
-    @Then("User enters {string}")
-    public void userName() {
-        registrationPage.userNameBox.click();
-        Faker fakerUsername = new Faker();
-        registrationPage.userNameBox.sendKeys(fakerUsername.name().username());
-    }
-
-    @Then("user enters {string}")
-    public void email() {
-        registrationPage.emailBox.click();
-        Faker fakerEmail = new Faker();
-        registrationPage.emailBox.sendKeys(fakerEmail.internet().emailAddress());
-    }
-
-    @Then("User enters {string}")
-    public void userEntersSevenDigitWithAtLeastOneUppercaseOneLowercaseOneDigitAndOneSpecialChar(String arg0) {
-        registrationPage.newPassword.sendKeys(arg0);
-    }
-
-    @Then("user confirms {string}")
-    public void userConfirmsPasswords(String arg0) {
-        registrationPage.passwordConfirm.sendKeys(arg0);
-    }
-
-
-    @Then(("user clicks {string}"))
-    public void registrationButton(){
-        registrationPage.registerButton.click();
-    }
-
-
-
-=======
     }
 
     @Then("user enters firstName")
@@ -135,7 +78,6 @@ public class US_001 {
 
     @Then("user clicks registration button")
     public void userClicksRegistrationButton() {
->>>>>>> Stashed changes
     }
 
 
