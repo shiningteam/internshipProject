@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
+
 import org.testng.Assert;
 import pages.HomePage;
 import pages.RegistrationPage;
@@ -15,63 +15,23 @@ import utilities.ReusableMethods;
 public class US_001 {
     HomePage homePage = new HomePage();
     RegistrationPage registrationPage = new RegistrationPage();
+    Faker faker = new Faker();
 
-    @Given("Go to home page")
-    public void goToHomePage() {
+    @Given("User goes to home page url")
+    public void userGoesToHomePageUrl() {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
+
+    }
+    @When("Click Signin buttn at the top")
+    public void clickSigninButtnAtTheTop() {
+        homePage.userButton.click();
     }
 
-    @When("Click Register button")
-    public void click_register_button() {
+    @Then("Click Registers button")
+    public void clickRegistersButton() {
         homePage.homePageDropDownRegisterButton.click();
     }
 
-
-    @Then("User enters {string}")
-    public void ssn_bar() {
-        registrationPage.ssnBox.click();
-        ReusableMethods.waitFor(2);
-        Faker faker = new Faker();
-        int randomNumber3 = faker.number().numberBetween(100, 999);
-        int randomNumber2 = faker.number().numberBetween(10, 99);
-        registrationPage.ssnBox.sendKeys(randomNumber3 + "-" + randomNumber2 + "-" + randomNumber3);
-        String elementText = registrationPage.ssnBox.getText();
-        Assert.assertTrue(elementText.contains("-"));
-
-    }
-
-    @Then("User enters {string}")
-    public void firstNameBox() {
-        registrationPage.lastNameBox.click();
-        Faker fakername = new Faker();
-        registrationPage.firstNameBox.sendKeys(fakername.name().firstName());
-    }
-
-    @Then("User enters {string}")
-    public void lastName() {
-        registrationPage.lastNameBox.click();
-        Faker fakerLastname = new Faker();
-        registrationPage.lastNameBox.sendKeys(fakerLastname.name().lastName());
-    }
-
-    @Then("User enters {string}")
-    public void userName() {
-        registrationPage.userNameBox.click();
-        Faker fakerUsername = new Faker();
-        registrationPage.userNameBox.sendKeys(fakerUsername.name().username());
-    }
-
-    @Then("user enters {string}")
-    public void email() {
-        registrationPage.emailBox.click();
-        Faker fakerEmail = new Faker();
-        registrationPage.emailBox.sendKeys(fakerEmail.internet().emailAddress());
-    }
-
-    @Then("User enters {string}")
-    public void userEntersSevenDigitWithAtLeastOneUppercaseOneLowercaseOneDigitAndOneSpecialChar(String arg0) {
-        registrationPage.newPassword.sendKeys(arg0);
-    }
 
     @Then("user confirms {string}")
     public void userConfirmsPasswords(String arg0) {
@@ -79,14 +39,47 @@ public class US_001 {
     }
 
 
-    @Then(("user clicks {string}"))
-    public void registrationButton(){
-        registrationPage.registerButton.click();
+
+    @Then("User enters SSN")
+    public void userEntersSSN() {
+        ReusableMethods.waitFor(2);
+
+        int randomNumber3 = faker.number().numberBetween(100, 999);
+        int randomNumber2 = faker.number().numberBetween(10, 99);
+        registrationPage.ssnBox.sendKeys(randomNumber3 + "-" + randomNumber2 + "-" + randomNumber3);
+        String elementText = registrationPage.ssnBox.getText();
+        Assert.assertTrue(elementText.contains("-"));
+    }
+
+    @Then("user enters firstName")
+    public void userEntersFirstName() {
+        registrationPage.firstNameBox.sendKeys(faker.name().firstName());
+    }
+
+    @Then("user enters lastName")
+    public void userEntersLastName() {
+        registrationPage.lastNameBox.sendKeys(faker.name().lastName());
+    }
+
+    @Then("user enters username")
+    public void userEntersUsername() {
+        registrationPage.username.sendKeys(faker.name().username());
+    }
+
+    @Then("user enters email")
+    public void userEntersEmail() {
+        registrationPage.emailBox.sendKeys(faker.internet().emailAddress());
+    }
+
+
+    @Then("user enters {string}")
+    public void userEnters(String arg0) {
+    }
+
+    @Then("user clicks registration button")
+    public void userClicksRegistrationButton() {
     }
 
 
 
-    }
-
-
-
+}

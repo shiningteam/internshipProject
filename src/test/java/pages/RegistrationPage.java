@@ -72,6 +72,10 @@ public class RegistrationPage {
     @FindBy(linkText = "This field is invalid" )
     public WebElement emailInvalid;
 
+    @FindBy(linkText = "Registation Saved")
+
+    public WebElement registrationSaved;
+
 
 
 
