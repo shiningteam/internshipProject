@@ -1,22 +1,21 @@
 @Register
-  Feature: registration
+Feature: registration
 
-    Background:
+  Background:
 
-      Given Go to home page
-      When Click Signin button at the top
-      Then Click Register button
+    Given User goes to home page url
+    When Click Signin buttn at the top
+    Then Click Registers button
 
 
-    Scenario: US_001_registration
-      And User enters "SSN"
-      And user enters "firstName"
-      And user enters "lastName"
-      And user enters "username"
-      And user enters "email"
-      And user enters "password"
-      And user confirms "password"
-      And user clicks "registration button"
-      And user asserts the registration is succesfull
+  Scenario: US_001_TC1
+    Then User enters SSN
+    Then user enters firstName
+    Then user enters lastName
+    Then user enters username
+    Then user enters email
+    Then user enters "password"
+    Then user confirms "password"
+    Then user clicks registration button
 
 

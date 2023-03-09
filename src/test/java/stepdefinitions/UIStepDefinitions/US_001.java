@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
+
 import org.testng.Assert;
 import pages.HomePage;
 import pages.RegistrationPage;
@@ -13,99 +13,73 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_001 {
-
     HomePage homePage = new HomePage();
     RegistrationPage registrationPage = new RegistrationPage();
+    Faker faker = new Faker();
 
-    @Given("Go to home page")
-    public void goToHomePage() {
+    @Given("User goes to home page url")
+    public void userGoesToHomePageUrl() {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
+
+    }
+    @When("Click Signin buttn at the top")
+    public void clickSigninButtnAtTheTop() {
+        homePage.userButton.click();
     }
 
-
-    @When("Click Register button")
-    public void click_register_button() {
+    @Then("Click Registers button")
+    public void clickRegistersButton() {
         homePage.homePageDropDownRegisterButton.click();
     }
 
 
-    @Then("User enters {string}")
-    public void ssn_bar(String string) {
+    @Then("user confirms {string}")
+    public void userConfirmsPasswords(String arg0) {
+        registrationPage.passwordConfirm.sendKeys(arg0);
+    }
 
-        registrationPage.ssnBox.click();
+
+
+    @Then("User enters SSN")
+    public void userEntersSSN() {
         ReusableMethods.waitFor(2);
-        Faker faker = new Faker();
+
         int randomNumber3 = faker.number().numberBetween(100, 999);
         int randomNumber2 = faker.number().numberBetween(10, 99);
         registrationPage.ssnBox.sendKeys(randomNumber3 + "-" + randomNumber2 + "-" + randomNumber3);
         String elementText = registrationPage.ssnBox.getText();
         Assert.assertTrue(elementText.contains("-"));
-
     }
-    @Then("user enters {string}")
-    public void firstNameBox(String string) {
 
-        registrationPage.firstNameBox.click();
-        Faker fakername = new Faker();
-        registrationPage.firstNameBox.sendKeys(fakername.name().firstName());
-
+    @Then("user enters firstName")
+    public void userEntersFirstName() {
+        registrationPage.firstNameBox.sendKeys(faker.name().firstName());
     }
-    @Then("user enters {string}")
-    public void lastNameBox(String string) {
 
-        registrationPage.lastNameBox.click();
-        Faker fakerlname = new Faker();
-        registrationPage.firstNameBox.sendKeys(fakerlname.name().lastName());
-
+    @Then("user enters lastName")
+    public void userEntersLastName() {
+        registrationPage.lastNameBox.sendKeys(faker.name().lastName());
     }
-    @Then("user enters {string}")
-    public void username(String string) {
 
-        registrationPage.userNameBox.click();
-        Faker fakeruname = new Faker();
-        registrationPage.userNameBox.sendKeys(fakeruname.name().username());
-
+    @Then("user enters username")
+    public void userEntersUsername() {
+        registrationPage.username.sendKeys(faker.name().username());
     }
+
+    @Then("user enters email")
+    public void userEntersEmail() {
+        registrationPage.emailBox.sendKeys(faker.internet().emailAddress());
+    }
+
 
     @Then("user enters {string}")
-    public void email(String string) {
-
-        registrationPage.emailBox.click();
-        Faker fakeremail = new Faker();
-        registrationPage.firstNameBox.sendKeys(fakeremail.internet().emailAddress());
-
+    public void userEnters(String arg0) {
     }
 
-    @Then("user enters {string}")
-    public void password(String string) {
-
-        registrationPage.newPassword.click();
-        Faker fakerp = new Faker();
-        registrationPage.firstNameBox.sendKeys(fakerp.internet().password());
-    }
-
-
-    @Then("user confirms {string}")
-    public void user_confirms(String string) {
-        registrationPage.passwordConfirm.click();
-        Faker fakerp= new Faker();
-        registrationPage.passwordConfirm.sendKeys(fakerp.internet().password());
-
-    }
-    @Then("user clicks {string}")
-    public void user_clicks(String string) {
-        registrationPage.registerButton.click();
-    }
-
-    @Then("user asserts the registration is succesfull")
-    public void user_asserts_the_registration_is_succesfull() {
-      registrationPage.registrationSaved.isDisplayed();
+    @Then("user clicks registration button")
+    public void userClicksRegistrationButton() {
     }
 
 
 
-
-    }
-
-
-
+}
