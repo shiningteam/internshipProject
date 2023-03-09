@@ -1,4 +1,4 @@
-package utilities.pojos;
+package pojos;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
