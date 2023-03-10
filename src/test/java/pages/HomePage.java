@@ -20,6 +20,8 @@ public class HomePage {
     public WebElement homePageDropDownRegisterButton;
 
 
+    @FindBy(xpath = "//span[contains(text(),'Sign in')]")
+    public WebElement homePageSignInButton;
 
 
 
