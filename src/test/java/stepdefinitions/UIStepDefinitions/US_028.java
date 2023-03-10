@@ -141,8 +141,10 @@ public class US_028 {
 
     }
 
+
     @And("Confirm delete operation and click on Delete button")
     public void confirmDeleteOperationAndClickOnDeleteButton(){
+
         clickElementByJS(adminMessages.confirmDeleteMessage);
 
     }
@@ -154,5 +156,13 @@ public class US_028 {
         Assert.assertTrue(deleteSuccessMessage.contains("is updated"));
 
 
+
     }
+
+
+
 }
+
+
+
+

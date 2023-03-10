@@ -10,8 +10,10 @@ public class AdminMessages {
     public AdminMessages (){
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath="(//tr)[1]")
     public WebElement messagesTable;
+
 
     @FindBy(id="jh-create-entity")
     public WebElement createNewMessageButton;
@@ -48,5 +50,6 @@ public class AdminMessages {
 
     @FindBy(className="Toastify__toast-body")
     public WebElement deleteSuccessMessage;
+
 
 }

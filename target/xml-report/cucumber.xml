@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="33.037" tests="4" skipped="0" failures="4" errors="0">
 <testcase classname="messages" name="TC01-Admin sees all messages their author and email" time="13.632">
+=======
+<<<<<<< Updated upstream
+<testsuite name="Cucumber" time="0.158" tests="0" skipped="0" failures="0" errors="0">
+=======
+<testsuite name="Cucumber" time="13.475" tests="4" skipped="0" failures="4" errors="0">
+<testcase classname="messages" name="TC01-Admin sees all messages their author and email" time="5.289">
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 <failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028">
 <![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
@@ -56,6 +64,7 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
 	... 46 more
+<<<<<<< HEAD
 Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:57567/devtools/browser/b6f512dc-ec5f-41c2-bfe5-c8fed84cdbe7
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
@@ -72,6 +81,28 @@ Driver info: driver.version: Driver
 	at utilities.Driver.getDriver(Driver.java:32)
 	at pages.HomePage.<init>(HomePage.java:10)
 	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:17)
+=======
+Caused by: org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.openqa.selenium.support.AbstractFindByBuilder.buildByFromShortFindBy(AbstractFindByBuilder.java:43)
+	at org.openqa.selenium.support.FindBy$FindByBuilder.buildIt(FindBy.java:85)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:79)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:57)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:90)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:78)
+	at pages.AdminHomePage.<init>(AdminHomePage.java:11)
+	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:19)
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	... 49 more
 ]]>
@@ -86,7 +117,11 @@ And Click on Messages option................................................skip
 Then The messages ,their authors and emails should be displayed.............skipped
 ]]></system-out>
 </testcase>
+<<<<<<< HEAD
 <testcase classname="messages" name="TC02-Admin should create  new message" time="7.621">
+=======
+<testcase classname="messages" name="TC02-Admin should create  new message" time="2.5">
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 <failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028">
 <![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
@@ -142,6 +177,7 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
 	... 46 more
+<<<<<<< HEAD
 Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:57597/devtools/browser/90d76ad5-0d12-465f-a209-4b577f4326ae
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
@@ -158,6 +194,28 @@ Driver info: driver.version: Driver
 	at utilities.Driver.getDriver(Driver.java:32)
 	at pages.HomePage.<init>(HomePage.java:10)
 	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:17)
+=======
+Caused by: org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.openqa.selenium.support.AbstractFindByBuilder.buildByFromShortFindBy(AbstractFindByBuilder.java:43)
+	at org.openqa.selenium.support.FindBy$FindByBuilder.buildIt(FindBy.java:85)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:79)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:57)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:90)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:78)
+	at pages.AdminHomePage.<init>(AdminHomePage.java:11)
+	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:19)
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	... 49 more
 ]]>
@@ -175,7 +233,11 @@ And Click on Save button....................................................skip
 Then Verify that success message............................................skipped
 ]]></system-out>
 </testcase>
+<<<<<<< HEAD
 <testcase classname="messages" name="TC03-Admin should update the message" time="6.258">
+=======
+<testcase classname="messages" name="TC03-Admin should update the message" time="2.724">
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 <failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028">
 <![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
@@ -231,6 +293,7 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
 	... 46 more
+<<<<<<< HEAD
 Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:57627/devtools/browser/5f5c39ca-ffb2-4c34-9327-a831a7b32fd1
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
@@ -247,6 +310,28 @@ Driver info: driver.version: Driver
 	at utilities.Driver.getDriver(Driver.java:32)
 	at pages.HomePage.<init>(HomePage.java:10)
 	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:17)
+=======
+Caused by: org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.openqa.selenium.support.AbstractFindByBuilder.buildByFromShortFindBy(AbstractFindByBuilder.java:43)
+	at org.openqa.selenium.support.FindBy$FindByBuilder.buildIt(FindBy.java:85)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:79)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:57)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:90)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:78)
+	at pages.AdminHomePage.<init>(AdminHomePage.java:11)
+	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:19)
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	... 49 more
 ]]>
@@ -264,7 +349,11 @@ And Click on Save button....................................................skip
 Then Verify that updated success message....................................skipped
 ]]></system-out>
 </testcase>
+<<<<<<< HEAD
 <testcase classname="messages" name="TC04-Admin should delete the message" time="4.739">
+=======
+<testcase classname="messages" name="TC04-Admin should delete the message" time="2.362">
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 <failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028">
 <![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.UIStepDefinitions.US_028
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
@@ -320,6 +409,7 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
 	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
 	... 46 more
+<<<<<<< HEAD
 Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:57658/devtools/browser/17ed8a01-76ff-4546-ac42-a4799049e10a
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
@@ -336,6 +426,28 @@ Driver info: driver.version: Driver
 	at utilities.Driver.getDriver(Driver.java:32)
 	at pages.HomePage.<init>(HomePage.java:10)
 	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:17)
+=======
+Caused by: org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.openqa.selenium.support.AbstractFindByBuilder.buildByFromShortFindBy(AbstractFindByBuilder.java:43)
+	at org.openqa.selenium.support.FindBy$FindByBuilder.buildIt(FindBy.java:85)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:79)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:57)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:90)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:78)
+	at pages.AdminHomePage.<init>(AdminHomePage.java:11)
+	at stepdefinitions.UIStepDefinitions.US_028.<init>(US_028.java:19)
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	... 49 more
 ]]>
@@ -348,8 +460,16 @@ And Verify that admin is logged in..........................................skip
 When Click on Items&Titles button...........................................skipped
 And Click on Messages option................................................skipped
 And Click  on Delete button of  created message.............................skipped
+<<<<<<< HEAD
 And Confirm delete operation and click on Delete button.....................skipped
 Then Verify that deleted success message....................................skipped
 ]]></system-out>
 </testcase>
+=======
+And Confirm delete operation and click on "Delete" button...................skipped
+Then Verify that deleted success message....................................skipped
+]]></system-out>
+</testcase>
+>>>>>>> Stashed changes
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 </testsuite>

@@ -1,6 +1,7 @@
 @Register
 Feature: registration
 
+
   Background:
 
     Given User goes to home page url
@@ -17,5 +18,4 @@ Feature: registration
     Then user enters "password"
     Then user confirms "password"
     Then user clicks registration button
-
 

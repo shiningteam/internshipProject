@@ -1,5 +1,10 @@
 @Register
+<<<<<<< HEAD
 Feature: registration
+=======
+
+  Feature: registration
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5
 
   Background:
 
@@ -19,3 +24,8 @@ Feature: registration
     Then user clicks registration button
 
 
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> 01f758714d4d1a52cd3c5e9e78cfcd513086c9a5

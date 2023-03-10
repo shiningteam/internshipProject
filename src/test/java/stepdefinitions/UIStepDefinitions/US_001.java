@@ -22,6 +22,7 @@ public class US_001 {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
 
     }
+
     @When("Click Signin buttn at the top")
     public void clickSigninButtnAtTheTop() {
         homePage.userButton.click();
@@ -33,11 +34,9 @@ public class US_001 {
     }
 
 
-    @Then("user confirms {string}")
     public void userConfirmsPasswords(String arg0) {
         registrationPage.passwordConfirm.sendKeys(arg0);
     }
-
 
 
     @Then("User enters SSN")
@@ -79,7 +78,6 @@ public class US_001 {
     @Then("user clicks registration button")
     public void userClicksRegistrationButton() {
     }
-
 
 
 }
