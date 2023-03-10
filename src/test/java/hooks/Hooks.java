@@ -2,6 +2,7 @@ package hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
@@ -13,7 +14,7 @@ public class Hooks {
     public void setUpScenario(){
     }
     @After
-    public void tearDownScenario(Scenario scenario){
+    public void tearDownScenario(@NotNull Scenario scenario){
 
         if (scenario.isFailed()){//capturing the screenshot when a sceraio fails and attaching it to the report
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -33,7 +34,7 @@ public class Hooks {
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
 
-    @Before("@US_016_API")
+    @Before("@US029_UI_Test")
     public void beforeApi(){
         medunnaSetUp();
     }
