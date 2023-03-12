@@ -15,20 +15,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
 
-        tags = "@TC02_CreateCity"
-
-
-
-
-
-
-
-
-
-
-
-
-
+        tags = "@US029_DeleteRequest"
 
 )
 public class Runner {

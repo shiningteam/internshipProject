@@ -34,6 +34,8 @@ public class US_008 {
                 get("/{first}/{second}/{third}");
         response.prettyPrint();
     }
+
+
     @Then("user validates the appointment")
     public void user_validates_the_appointment() {
 
