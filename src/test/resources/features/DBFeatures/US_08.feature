@@ -4,6 +4,6 @@ Feature: Appointment Validation
   Scenario: Validate Appointment by Appointment ID
 
     Given user connects to database
-    When get all "ID" as a list from "Appointments"
-    Then verify countryId contains "1251"
+    When get all "id" as a list from "appointment"
+    Then verify countryId contains 1251
     And close the connection

@@ -1,55 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="28.64" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Create Country" name="TC01_CreateCountry - Example #1.1" time="28.502">
-<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Items&amp;Titles&quot;}
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab4eeaaf591ef2a381d0379df1e2b26b, findElement {using=link text, value=Items&amp;Titles}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\can07\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60892}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60892/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ab4eeaaf591ef2a381d0379df1e2b26b">
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Items&Titles"}
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab4eeaaf591ef2a381d0379df1e2b26b, findElement {using=link text, value=Items&Titles}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\can07\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60892}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60892/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ab4eeaaf591ef2a381d0379df1e2b26b
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
-	at stepdefinitions.UIStepDefinitions.US_029.click_on_items_titles_icon(US_029.java:26)
-	at ✽.Click on Items&Titles icon(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/UIFeatures/US_029.feature:11)
+<testsuite name="Cucumber" time="2.544" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Appointment Validation" name="Validate Appointment by Appointment ID" time="2.405">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;java.util.List.contains(Object)&quot; because &quot;this.columnLists&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.contains(Object)" because "this.columnLists" is null
+	at stepdefinitions.DBStepDefinitions.US_008.verify_country_id_contains(US_008.java:13)
+	at ✽.verify countryId contains 1251(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/DBFeatures/US_08.feature:8)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given User goes to home page................................................passed
-And User tries to login entering "AdminTeam01" and "Team01+"................passed
-And Click on Items&Titles icon..............................................failed
-And Select the Country from dropdown........................................skipped
-Then Verify the country page is displayed...................................skipped
-And Click on Create a new country button....................................skipped
-And Enter the "Italy".......................................................skipped
-And Click on Save button....................................................skipped
-Then Verify the new country is created......................................skipped
+Given user connects to database.............................................passed
+When get all "id" as a list from "appointment"..............................passed
+Then verify countryId contains 1251.........................................failed
+And close the connection....................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

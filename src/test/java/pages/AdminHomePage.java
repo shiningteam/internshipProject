@@ -22,7 +22,8 @@ public class AdminHomePage {
     @FindBy(linkText = "Country")
     public WebElement country;
 
-
+    @FindBy(linkText = "State/City")
+    public WebElement stateCity;
 
 
 
