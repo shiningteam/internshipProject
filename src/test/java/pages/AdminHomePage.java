@@ -25,6 +25,10 @@ public class AdminHomePage {
     @FindBy(linkText = "State/City")
     public WebElement stateCity;
 
+    @FindBy (xpath = "(//a[@href='/staff'])[1]")
+    public WebElement staffButton;
+
+
 
 
 }

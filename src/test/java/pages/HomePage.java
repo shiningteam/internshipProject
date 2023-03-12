@@ -19,6 +19,10 @@ public class HomePage {
     @FindBy (xpath = "//span[contains(text(),'Register')]")
     public WebElement homePageDropDownRegisterButton;
 
+    @FindBy (id= "login-item")
+    public WebElement SignInButton;
+
+
 
 
 

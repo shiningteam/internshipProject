@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="3.01" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Country Validation" name="TC03_DELETE_Request" time="2.881">
-<failure type="java.lang.AssertionError" message="expected:&lt;200&gt; but was:&lt;500&gt;">
-<![CDATA[java.lang.AssertionError: expected:<200> but was:<500>
-	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
-	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:328)
-	at stepdefinitions.APIStepDefinitions.US_029.user_validates_the_delete_of_country(US_029.java:118)
-	at ✽.user validates the delete of country(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/APIFeatures/US_029.feature:23)
-]]>
-</failure>
+<testsuite name="Cucumber" time="14.906" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Create_Staff" name=" - users credentials - Example #1.1" time="14.112">
 <system-out><![CDATA[
-Given user sends DELETE request for the update the new country name.........passed
-Then user validates the delete of country...................................failed
+Given User goes to home page................................................passed
+When Admin clicks user button at the top....................................passed
+And Admin clicks signin button..............................................passed
+And Admin fills the user name part "AdminTeam01" and password part "Team01+" click sinin button.passed
+And Admin click Items&Titles and click Staff button.........................passed
+And Clicks Create a Staff button............................................passed
+And Clicks Use Snn radio button.............................................passed
+And writes a registered "333-33-5332" to confirm............................passed
+Then Assert that User found with search SSN is displayed....................passed
 ]]></system-out>
 </testcase>
 </testsuite>
