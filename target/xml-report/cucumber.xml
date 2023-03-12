@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testsuite name="Cucumber" time="3.01" tests="1" skipped="0" failures="1" errors="0">
 <testcase classname="Country Validation" name="TC03_DELETE_Request" time="2.881">
 <failure type="java.lang.AssertionError" message="expected:&lt;200&gt; but was:&lt;500&gt;">
@@ -17,4 +18,7 @@ Given user sends DELETE request for the update the new country name.........pass
 Then user validates the delete of country...................................failed
 ]]></system-out>
 </testcase>
+=======
+<testsuite name="Cucumber" time="0.445" tests="0" skipped="0" failures="0" errors="0">
+>>>>>>> Stashed changes
 </testsuite>
