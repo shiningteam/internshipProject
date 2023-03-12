@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
 
-        tags = "@TC01_CreateCountry"
+        tags = "@TC02_CreateCity"
 
 
 
