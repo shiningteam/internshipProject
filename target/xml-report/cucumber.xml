@@ -1,95 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="53.457" tests="3" skipped="0" failures="2" errors="0">
-<testcase classname="Create Country" name="login_scenario - test_data - Example #1.1" time="17.603">
-<system-out><![CDATA[
-Given User goes to home page................................................passed
-And User tries to login entering "AdminTeam01" and "Team01+"................passed
-Then Assert that login successful...........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Create Country" name="TC01_CreateCountry - Example #1.1" time="19.933">
-<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Items&amp;Titles&quot;}
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0c795011eec5029f6075f430936a8146, findElement {using=link text, value=Items&amp;Titles}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\can07\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58773}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58773/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c795011eec5029f6075f430936a8146">
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Items&Titles"}
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0c795011eec5029f6075f430936a8146, findElement {using=link text, value=Items&Titles}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\can07\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58773}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58773/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c795011eec5029f6075f430936a8146
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
-	at stepdefinitions.UIStepDefinitions.US_029.click_on_items_titles_icon(US_029.java:17)
-	at ✽.Click on Items&Titles icon(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/UIFeatures/US_029.feature:18)
+<testsuite name="Cucumber" time="17.994" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US016_API" name="US_016_TC_001_Post_Request_Creating_Patient" time="16.952">
+<failure type="java.lang.AssertionError" message="expected:&lt;201&gt; but was:&lt;500&gt;">
+<![CDATA[java.lang.AssertionError: expected:<201> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepdefinitions.APIStepDefinitions.US_016.verify_the_created_patient_s_information(US_016.java:39)
+	at ✽.verify the created patient's information(file:///C:/Users/semra/IdeaProjects/internshipProject/./src/test/resources/features/APIFeatures/US_016.feature:7)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given User goes to home page................................................passed
-And Click on Items&Titles icon..............................................failed
-And Select the Country from dropdown........................................skipped
-Then Verify the country page is displayed...................................skipped
-And Click on Create a new country button....................................skipped
-And Enter the "Italy".......................................................skipped
-And Click on Save button....................................................skipped
-Then Verify the new country is created......................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Create Country" name="TC02_CreateStateCity - Example #1.1" time="15.648">
-<failure type="org.openqa.selenium.NoSuchElementException" message="Unable to find element with locator By.linkText: Items&amp;Titles
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: driver.version: RemoteWebDriver">
-<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.linkText: Items&Titles
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
-	at stepdefinitions.UIStepDefinitions.US_029.click_on_items_titles_icon(US_029.java:17)
-	at ✽.Click on Items&Titles icon(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/UIFeatures/US_029.feature:33)
-]]>
-</failure>
-<system-out><![CDATA[
-Given User goes to home page................................................passed
-And Click on Items&Titles icon..............................................failed
-And Select the State/City from dropdown.....................................skipped
-Then Verify the State/City page is displayed................................skipped
-And Click on Create a new State/City button.................................skipped
-And Enter the "Rome"........................................................skipped
-And Select the "<countryName>" from dropdown................................skipped
-And Click on Save button....................................................skipped
-Then Verify the new city is created.........................................skipped
+Given user sends POST request for creating patient..........................passed
+Then verify the created patient's information...............................failed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -27,8 +27,8 @@ public class US_016 {
 //        pojo.setCreatedBy("AdminTeam01");
 
        response = given().
-               headers("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMSIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjgwOTU0NTg4fQ.XeEHIxGJRLhJvK6S1mHG3SuoZMWxRW3WUvnRmD-rSVkwsX5jy6KWphJT88w8qJ75num1SAhufbF_fEThKBeqiQ",
-                       "Content-Type", ContentType.JSON, "Accept", ContentType.JSON).
+               headers("Authorization", "Bearer " +generateToken("AdminTeam01", "Team01+"),
+                       "Content-Type", ContentType.JSON).
                spec(spec).contentType(ContentType.JSON).
                body(pojo).post("/{first}/{second}");
        response.prettyPrint();
