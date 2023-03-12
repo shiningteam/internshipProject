@@ -28,7 +28,6 @@ import org.junit.runner.RunWith;
 
 
 
->>>>>>> Stashed changes
 
 )
 public class Runner {
