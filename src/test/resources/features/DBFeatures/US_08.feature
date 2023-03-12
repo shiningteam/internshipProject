@@ -7,3 +7,4 @@ Feature: Appointment Validation
     When get all "id" as a list from "appointment"
     Then verify countryId contains 1251
     And close the connection
+

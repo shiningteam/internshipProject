@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.544" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Appointment Validation" name="Validate Appointment by Appointment ID" time="2.405">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;java.util.List.contains(Object)&quot; because &quot;this.columnLists&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.contains(Object)" because "this.columnLists" is null
-	at stepdefinitions.DBStepDefinitions.US_008.verify_country_id_contains(US_008.java:13)
-	at ✽.verify countryId contains 1251(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/DBFeatures/US_08.feature:8)
+<testsuite name="Cucumber" time="3.01" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Country Validation" name="TC03_DELETE_Request" time="2.881">
+<failure type="java.lang.AssertionError" message="expected:&lt;200&gt; but was:&lt;500&gt;">
+<![CDATA[java.lang.AssertionError: expected:<200> but was:<500>
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:328)
+	at stepdefinitions.APIStepDefinitions.US_029.user_validates_the_delete_of_country(US_029.java:118)
+	at ✽.user validates the delete of country(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/APIFeatures/US_029.feature:23)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given user connects to database.............................................passed
-When get all "id" as a list from "appointment"..............................passed
-Then verify countryId contains 1251.........................................failed
-And close the connection....................................................skipped
+Given user sends DELETE request for the update the new country name.........passed
+Then user validates the delete of country...................................failed
 ]]></system-out>
 </testcase>
 </testsuite>
