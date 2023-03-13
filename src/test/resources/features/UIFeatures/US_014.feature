@@ -28,3 +28,6 @@ Feature: US_14
       |inpatients|
       |ShiningPatient|
 
+
+
+
