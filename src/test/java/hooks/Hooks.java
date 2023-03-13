@@ -5,9 +5,12 @@ import io.cucumber.java.Scenario;
 import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import static baseurl.MedunnaBaseUrl.medunnaSetUp;
+import static utilities.JSUtils.clickElementByJS;
 
 public class Hooks {
     @Before
@@ -40,5 +43,6 @@ public class Hooks {
     public void beforeApi(){
         medunnaSetUp();
     }
+
 
 }

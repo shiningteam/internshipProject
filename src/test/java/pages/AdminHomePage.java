@@ -19,7 +19,11 @@ public class AdminHomePage {
     @FindBy(xpath = "//div[@class='dropdown-menu dropdown-menu-right show']")
     public WebElement itemsTitlesDropdown;
 
+    @FindBy(linkText = "Country")
+    public WebElement country;
 
+    @FindBy(linkText = "Patients")
+    public WebElement patientsLink;
 
 
 
