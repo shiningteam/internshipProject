@@ -14,8 +14,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-
-        tags = "@US029_DeleteRequest"
+        tags = "@US24InvoiceProcess"
 
 )
 public class Runner {

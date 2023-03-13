@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="14.906" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Create_Staff" name=" - users credentials - Example #1.1" time="14.112">
+<testsuite name="Cucumber" time="19.944" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="TestItem_feature" name="Display the patient searched with SSN" time="18.742">
 <system-out><![CDATA[
-Given User goes to home page................................................passed
-When Admin clicks user button at the top....................................passed
-And Admin clicks signin button..............................................passed
-And Admin fills the user name part "AdminTeam01" and password part "Team01+" click sinin button.passed
-And Admin click Items&Titles and click Staff button.........................passed
-And Clicks Create a Staff button............................................passed
-And Clicks Use Snn radio button.............................................passed
-And writes a registered "333-33-5332" to confirm............................passed
-Then Assert that User found with search SSN is displayed....................passed
+Given User goes to home page and Sign in with staff credentials.............passed
+And Navigate to "search-patient"  page and searches patient with SSN........passed
+Then View and  Verifies that the patient searched with SSN is displayed.....passed
+]]></system-out>
+</testcase>
+<testcase classname="TestItem_feature" name="Check the invoice process" time="0.999">
+<system-out><![CDATA[
+Then Verifies that patient's status is COMPLETED............................passed
+Then Verifies that all invoice is visible...................................passed
+Then Verifies  that the invoice sent to the patient is visible..............passed
+Then Close the application..................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
