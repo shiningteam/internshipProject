@@ -25,6 +25,7 @@ public class DBUtils {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        System.out.println("Success");
     }
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object

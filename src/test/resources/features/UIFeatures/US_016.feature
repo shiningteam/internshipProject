@@ -7,13 +7,14 @@
     When Click Patients link
     And  Click Create a new Patient button
     Then Verify see all patient information
-    And  Enter the required fields
-    Then Verify the "<State>" should be provided as USA state and cannot be blank
+    And  Enter the required fields and "<state>" cannot be blank
+    Then Verify the "<country>" should be provided as USA
     Then Verify creating the new patient succesfully
       Examples:
-        | State |
-        | USA   |
-        |       |
+        | state | country |
+        | OHIO  | USA     |
+        |       | USA     |
+
 
 
 

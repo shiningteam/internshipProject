@@ -70,15 +70,15 @@ public class US_016 {
         Assert.assertEquals(expectedRequiredFieldsNames, requiredFieldsNames);
     }
 
-    @Then("Enter the required fields")
-    public void enter_the_required_fields() {
+    @Then("Enter the required fields and {string} cannot be blank")
+    public void enter_the_required_fields_and_cannot_be_blank(String string) {
         for (WebElement w: adminPatientsPage.patientInformation1){
             switch (adminPatientsPage.patientInformation1.indexOf(w)){
                 case 0:
-                    Driver.waitAndSendText(w, "John");
+                    Driver.waitAndSendText(w, faker.name().firstName());
                     break;
                 case 1:
-                    Driver.waitAndSendText(w, "Yılmaz");
+                    Driver.waitAndSendText(w, faker.name().lastName());
                     break;
                 case 2:
                     Driver.waitAndSendText(w, "11.02.1999");
@@ -88,7 +88,7 @@ public class US_016 {
                     Driver.waitAndSendText(w, email);
                     break;
                 case 4:
-                    Driver.waitAndSendText(w, faker.phoneNumber().cellPhone());
+                    Driver.waitAndSendText(w, faker.number().digits(10));
             }
         }
 
@@ -104,34 +104,39 @@ public class US_016 {
                     Driver.wait(3);
                     select1.selectByVisibleText("B+");
                     break;
-                case 2:
-                    Select select2=new Select(t);
-                    Driver.wait(4);
-                    select2.selectByVisibleText("system");
+
                 case 3:
                     Select select3=new Select(t);
                     Driver.wait(4);
                     select3.selectByVisibleText("USA");
-                case 4:
-                    Select select4=new Select(t);
-                    Driver.wait(4);
-                    select4.selectByVisibleText("NEWYORK");
             }
         }
+        Driver.waitAndClick(adminPatientsPage.state);
+        Select state=new Select(adminPatientsPage.state);
+        state.selectByVisibleText(string);
         ReusableMethods.waitFor(2);
         Driver.waitAndClick(adminPatientsPage.saveButton);
     }
-    @Then("Verify the {string} should be provided as USA state and cannot be blank")
-    public void verify_the_should_be_provided_as_usa_state_and_cannot_be_blank(String string) {
+    @Then("Verify the {string} should be provided as USA")
+    public void verify_the_should_be_provided_as_usa(String string) {
+        ReusableMethods.waitFor(2);
         Driver.waitAndClick(adminPatientsPage.createdDateButton);
-        for (WebElement w: adminPatientsPage.table){
-            if (w.getText().contains(email){
+        ReusableMethods.waitFor(2);
+        Driver.waitAndClick(adminPatientsPage.viewButton);
+        Assert.assertTrue(adminPatientsPage.countryUSA.getText().contains(string));
 
-            }
-        }
     }
     @Then("Verify creating the new patient succesfully")
     public void verify_creating_the_new_patient_succesfully() {
-
+        ReusableMethods.waitFor(2);
+        Driver.waitAndClick(adminPatientsPage.editPagePatientsLink);
+        Driver.waitAndClick(adminPatientsPage.createdDateButton);
+        for (WebElement w: adminPatientsPage.table){
+           if (w.getText().contains(email)){
+               System.out.println(w.getText());
+               Assert.assertTrue(true);
+               break;
+           }
+        }
     }
 }

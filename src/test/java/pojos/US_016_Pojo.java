@@ -6,10 +6,11 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 public class US_016_Pojo {
     /**
      {
-         "createdBy": "adminteam01",
-         "firstName": "ShiningPatient3",
-         "lastName": "Team",
-         "phone": "5555555545",
+         "createdBy": "system",
+         "firstName": "Hank",
+         "lastName": "MacGyver",
+         "phone": "3443447575",
+        "email": "keith.bruen@yahoo.com",
          "user": {
              "login": "system",
              "activated": true,
@@ -18,27 +19,23 @@ public class US_016_Pojo {
          }
      */
 
-    private String createdBy;
+
     private String firstName;
     private String lastName;
     private String phone;
+    private String email;
     private US_016_UserPojo user;
 
-    public US_016_Pojo(String createdBy, String firstName, String lastName, String phone, US_016_UserPojo user) {
-        this.createdBy = createdBy;
+    public US_016_Pojo(String firstName, String lastName, String phone, String email, US_016_UserPojo user) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
         this.user = user;
+        this.email= email;
     }
 
-    public String getCreatedBy() {
-        return createdBy;
-    }
 
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -63,6 +60,13 @@ public class US_016_Pojo {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String phone) {
+        this.email = email;
+    }
 
     public US_016_UserPojo getUser() {
         return user;
@@ -78,7 +82,7 @@ public class US_016_Pojo {
     @Override
     public String toString() {
         return "US_016_Pojo{" +
-                "createdBy='" + createdBy + '\'' +
+
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", phone='" + phone + '\'' +

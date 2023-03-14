@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f82d5101-2137-40df-a4e3-e343d91804cb">
-      <console name="medunna_db_v2" type="STANDARD" schema="postgres" session="Main" />
+      <console name="medunna_db_v2" type="STANDARD" schema="postgres" session="Main"><![CDATA[SELECT * FROM country]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

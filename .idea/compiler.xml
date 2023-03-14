@@ -11,6 +11,9 @@
         <module name="internshipProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="internshipProject" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
