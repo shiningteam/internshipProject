@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="53.809" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="US_12" name="US012_TC01 - data - Example #1.1" time="28.961">
+<system-out><![CDATA[
+Given Go to home page and sign in...........................................passed
+And User clicks on MY PAGES dropdown and select My Appointments option......passed
+And Click on edit button....................................................passed
+And Verify user see patiet's id such as "10566","03.04.2023","03.04.2023","COMPLETED","ShiningPhysician".passed
+And User types in required fields...........................................passed
+Then Verify the required fields can be typed................................passed
+Then close the application..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_12" name="US012_TC02" time="24.238">
+<system-out><![CDATA[
+Given Go to home page and sign in...........................................passed
+And User clicks on MY PAGES dropdown and select My Appointments option......passed
+And Click on edit button....................................................passed
+When Only numbers are to be entered in the description field................passed
+Then Verify the edit is done succesfully....................................passed
+Then Verify there is no error if only numbers are to be entered in the description field..passed
+Then Close the application..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
