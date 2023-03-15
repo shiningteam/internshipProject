@@ -37,7 +37,7 @@ public class Hooks {
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
 
-    @Before("@US029_DeleteRequest")
+    @Before("@TC01_CreateCountry")
     public void beforeApi(){
         medunnaSetUp();
     }
