@@ -12,8 +12,7 @@ public class US_003 {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Given("Go to home page")
-    public void goToHomePage() {
-        Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
+    public void goToHomePage() {Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
     }
 
     @When("Click Signin button at the top")

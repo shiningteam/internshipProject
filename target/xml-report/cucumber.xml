@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <testsuite name="Cucumber" time="33.037" tests="4" skipped="0" failures="4" errors="0">
@@ -511,16 +512,18 @@ Session ID: bd08f6d958077da0e6d5efde4b4c2cdb
 	at ✽.Select the Country from dropdown(file:///C:/Users/can07/IdeaProjects/internshipProject/./src/test/resources/features/UIFeatures/US_029.feature:12)
 ]]>
 </failure>
+=======
+<testsuite name="Cucumber" time="12.705" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Appointmentes by patients" name="TC01_A patient should be able to see the test results." time="12.171">
+>>>>>>> Stashed changes
 <system-out><![CDATA[
-Given User goes to home page................................................passed
-And User tries to login entering "AdminTeam01" and "Team01+"................passed
-And Click on Items&Titles icon..............................................passed
-And Select the Country from dropdown........................................failed
-Then Verify the country page is displayed...................................skipped
-And Click on Create a new country button....................................skipped
-And Enter the "Italy".......................................................skipped
-And Click on Save button....................................................skipped
-Then Verify the new "Italy" is created......................................skipped
+Given The user verifies he is in the  home page.............................passed
+And The user verifies he is logged in as a patient..........................passed
+When Click on MY PAGES(PATIENT) button......................................passed
+And Click on My Appointments option.........................................passed
+And Click on Show Tests button to be able to see the related test result....passed
+And Clik on View Results button.............................................passed
+Then Verifies that there can be seen  id, name for test, default max and min value, test date and description..passed
 ]]></system-out>
 </testcase>
 >>>>>>> master
