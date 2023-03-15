@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminHomePage {
 
     public AdminHomePage() {
@@ -27,6 +29,24 @@ public class AdminHomePage {
 
     @FindBy(className = "dropdown-item active")
     public WebElement adminMessagesOption;
+
+
+    @FindBy(linkText = "Items&Titles")
+    public WebElement itemsTitlesIcon;
+
+    @FindBy(xpath = "//div[@class='dropdown-menu dropdown-menu-right show']")
+    public WebElement itemsTitlesDropdown;
+
+    @FindBy(linkText = "Country")
+    public WebElement country;
+
+    @FindBy(linkText = "State/City")
+    public WebElement stateCity;
+
+    @FindBy (xpath = "(//a[@href='/staff'])[1]")
+    public WebElement staffButton;
+
+
 
 
 }

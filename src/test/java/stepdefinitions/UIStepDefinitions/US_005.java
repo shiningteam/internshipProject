@@ -36,9 +36,9 @@ public class US_005 {
         clickElementByJS(homePage.loginButton);
         ReusableMethods.waitFor(2);
         signInPage.userNameBox.sendKeys(string);
-        signInPage.passwordBox.sendKeys(string);
-        clickElementByJS(signInPage.signinButton);
-        ReusableMethods.waitFor(3);
+        signInPage.passwordBox.sendKeys(string2);
+        clickElementByJS(signInPage.signInButton);
+        ReusableMethods.waitFor(5);
     }
 
 

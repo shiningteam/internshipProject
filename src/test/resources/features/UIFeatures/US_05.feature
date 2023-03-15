@@ -7,7 +7,7 @@ Feature: Login_feature
   Scenario Outline: login_scenario
     And User tries to login entering "<username>" and "<password>"
     Then Assert that login successful
-
+    Then close application
     Examples:test_data
       |  username        |   password      |
       | AdminTeam01      |   Team01+       |
