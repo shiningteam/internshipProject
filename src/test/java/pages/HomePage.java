@@ -24,6 +24,8 @@ public class HomePage {
 
 
 
+    @FindBy(xpath = "//span[contains(text(),'Sign in')]")
+    public WebElement homePageSignInButton;
 
 
 

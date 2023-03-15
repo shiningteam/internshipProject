@@ -16,6 +16,18 @@ public class Hooks {
     @Before
     public void setUpScenario(){
     }
+
+    @After
+    public void tearDownScenario(@NotNull Scenario scenario){
+
+        if (scenario.isFailed()){//capturing the screenshot when a sceraio fails and attaching it to the report
+            final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(failedScreenshot,"image/png","failed_scenario"+scenario.getName()+"");
+
+        }
+        Driver.closeDriver();
+    }
+
 //    @After
 //    public void tearDownScenario(@NotNull Scenario scenario){
 //
@@ -25,7 +37,7 @@ public class Hooks {
 //
 //        }
 //        Driver.closeDriver();
-//    }
+//
 
     @Before("@smoke_tests")
     public void setUpSmokeScenarios(){
@@ -37,7 +49,10 @@ public class Hooks {
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
 
-    @Before("@TC01_CreateCountry")
+
+    @Before("Api28")
+
+
     public void beforeApi(){
         medunnaSetUp();
     }

@@ -12,6 +12,24 @@ public class AdminHomePage {
     public AdminHomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+    @FindBy(id = "account-menu")
+    public WebElement adminNameButton;
+
+    @FindBy(id = "entity-menu")
+    public WebElement adminItemsTitlesButton;
+
+    @FindBy(className = "dropdown-item active")
+    public WebElement adminMessagesOption;
+
+    @FindBy(id = "account-menu")
+    public WebElement adminNameButton;
+
+    @FindBy(id = "entity-menu")
+    public WebElement adminItemsTitlesButton;
+
+    @FindBy(className = "dropdown-item active")
+    public WebElement adminMessagesOption;
+
 
     @FindBy(linkText = "Items&Titles")
     public WebElement itemsTitlesIcon;
@@ -32,3 +50,5 @@ public class AdminHomePage {
 
 
 }
+
+
