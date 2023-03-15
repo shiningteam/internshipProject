@@ -25,11 +25,15 @@ public class Driver {
     private Driver(){
     }
     public static WebDriver getDriver() {
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
         if (driver == null) {
             String browser = ConfigReader.getProperty("browser");
             if ("chrome".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(options);
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
@@ -40,8 +44,9 @@ public class Driver {
                 WebDriverManager.getInstance(SafariDriver.class).setup();
                 driver = new SafariDriver();
             } else if ("chrome-headless".equals(browser)) {
+                options.setHeadless(true);
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                driver = new ChromeDriver(options);
             }
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
