@@ -4,7 +4,7 @@
 
     Scenario: User should be validated username and email address by sending "GET" request
       Given user sends GET request for accounts
-      Then user validates username "mervemermer2023" and email address "
+      Then user validates username and email address
 
     Scenario: User should be validated the username is unique by sending "GET" request
       Given user sends GET request for accounts

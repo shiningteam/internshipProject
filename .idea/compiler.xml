@@ -12,11 +12,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="InternProject" target="11" />
       <module name="internshipProject" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="InternProject" options="--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED" />
       <module name="internshipProject" options="--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED" />
     </option>
   </component>

@@ -21,9 +21,6 @@ public class AdminHomePage {
     @FindBy(className = "dropdown-item active")
     public WebElement adminMessagesOption;
 
-
-
-
     @FindBy(linkText = "Items&Titles")
     public WebElement itemsTitlesIcon;
 
