@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = ""
+        tags = "@US_002_ApiTest"
 
 
 

@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
-<testsuite name="Cucumber" time="5.17" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Username and Email Address Validation" name="Validate user by Username and Email Address - Example #1.1" time="2.543">
+<testsuite name="Cucumber" time="6.329" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Username and email address - Api Test" name="User should be validated username and email address by sending &quot;GET&quot; request" time="4.337">
 <system-out><![CDATA[
-Given user connects to database.............................................passed
-When get all "login" as a list from "jhi_user"..............................passed
-Then verify contains "mervemermer"..........................................passed
-And close the connection....................................................passed
+Given user sends GET request for accounts...................................passed
+Then user validates username and email address..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Username and Email Address Validation" name="Validate user by Username and Email Address - Example #1.2" time="2.34">
+<testcase classname="Username and email address - Api Test" name="User should be validated the username is unique by sending &quot;GET&quot; request" time="1.713">
 <system-out><![CDATA[
-Given user connects to database.............................................passed
-When get all "email address" as a list from "jhi_user"......................passed
-Then verify contains "mervemermer@gmail.com"................................passed
-And close the connection....................................................passed
+Given user sends GET request for accounts...................................passed
+Then user validate that the username is unique..............................passed
 ]]></system-out>
 </testcase>
-=======
-<testsuite name="Cucumber" time="0.51" tests="0" skipped="0" failures="0" errors="0">
->>>>>>> Stashed changes
 </testsuite>
