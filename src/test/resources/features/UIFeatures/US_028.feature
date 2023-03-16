@@ -15,7 +15,7 @@ Feature:messages
   Scenario: TC02-Admin should create  new message
     And   Click  on Create a new Message button
     And   Fill in the blanks with required information
-    And   Click on Save button
+    And   Click on messagesSave button
     Then  Verify that success message
 
   Scenario: TC03-Admin should update the message
