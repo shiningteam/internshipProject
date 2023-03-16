@@ -28,7 +28,7 @@ public class US_028 {
     @And("Verify that admin is in home page")
     public void verifyThatAdminIsInHomePage() {
         String currentUrl=Driver.getDriver().getCurrentUrl();
-        System.out.println("title = " + currentUrl);
+
         Assert.assertEquals("https://www.medunna.com/",currentUrl);
 
     }
@@ -92,9 +92,9 @@ public class US_028 {
         adminMessages.messageForMessage.sendKeys("Can you send email the test results");
 
     }
+    @And("Click on messagesSave button")
+    public void clickOnMessagesSaveButton() {
 
-    @And("Click on Save button")
-    public void clickOnSaveButton() {
         ReusableMethods.waitFor(2);
         clickElementByJS(adminMessages.saveButton);
 

@@ -21,14 +21,7 @@ public class AdminHomePage {
     @FindBy(className = "dropdown-item active")
     public WebElement adminMessagesOption;
 
-    @FindBy(id = "account-menu")
-    public WebElement adminNameButton;
 
-    @FindBy(id = "entity-menu")
-    public WebElement adminItemsTitlesButton;
-
-    @FindBy(className = "dropdown-item active")
-    public WebElement adminMessagesOption;
 
 
     @FindBy(linkText = "Items&Titles")
