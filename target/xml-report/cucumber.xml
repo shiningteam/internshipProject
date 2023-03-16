@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testsuite name="Cucumber" time="5.17" tests="2" skipped="0" failures="0" errors="0">
 <testcase classname="Username and Email Address Validation" name="Validate user by Username and Email Address - Example #1.1" time="2.543">
 <system-out><![CDATA[
@@ -16,4 +17,7 @@ Then verify contains "mervemermer@gmail.com"................................pass
 And close the connection....................................................passed
 ]]></system-out>
 </testcase>
+=======
+<testsuite name="Cucumber" time="0.51" tests="0" skipped="0" failures="0" errors="0">
+>>>>>>> Stashed changes
 </testsuite>
