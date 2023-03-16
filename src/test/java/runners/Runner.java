@@ -14,12 +14,13 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = ""
+
+
+
+        tags = "@US_002_ApiTest"
 
 
 
 )
 public class Runner {
-
-
 }
