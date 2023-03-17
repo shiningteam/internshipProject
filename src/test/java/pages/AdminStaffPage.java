@@ -88,6 +88,4 @@ public class AdminStaffPage {
 
     @FindBy(id="jhi-confirm-delete-cTestItem")
     public WebElement deleteConfirmButton;
-
-
 }
