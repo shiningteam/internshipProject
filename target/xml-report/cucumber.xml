@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="6.329" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Username and email address - Api Test" name="User should be validated username and email address by sending &quot;GET&quot; request" time="4.337">
+<testsuite name="Cucumber" time="125.192" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Show appointments for patients by Staff" name="TC_01, TC_02, TC_03 Staff edit appointments" time="57.091">
 <system-out><![CDATA[
-Given user sends GET request for accounts...................................passed
-Then user validates username and email address..............................passed
+Given User goes to home page and Sign in with staff credentials.............passed
+And Navigate to "search-patient"  page and searches patient with SSN........passed
+And View and  Verifies that the patient searched with SSN is displayed......passed
+And Click Show Appointments button and verify...............................passed
+Then Click edit button from an appointment and verify.......................passed
+Then Select the status from dropdown and verify.............................passed
+Then Leave blank Anamnesis, Treatment, Diagnosis and verify.................passed
+Then Close the application..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Username and email address - Api Test" name="User should be validated the username is unique by sending &quot;GET&quot; request" time="1.713">
+<testcase classname="Show appointments for patients by Staff" name="TC_04 Staff can select the current doctor that needs to be selected for the patient" time="34.455">
 <system-out><![CDATA[
-Given user sends GET request for accounts...................................passed
-Then user validate that the username is unique..............................passed
+Given User goes to home page and Sign in with staff credentials.............passed
+And Navigate to "search-patient"  page and searches patient with SSN........passed
+And View and  Verifies that the patient searched with SSN is displayed......passed
+And Click Show Appointments button and verify...............................passed
+Then Click edit button from an appointment and verify.......................passed
+Then Select Physician from dropdown and verify..............................passed
+Then Close the application..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Show appointments for patients by Staff" name="TC_05 Staff can view the patients test results" time="33.308">
+<system-out><![CDATA[
+Given User goes to home page and Sign in with staff credentials.............passed
+And Navigate to "search-patient"  page and searches patient with SSN........passed
+And View and  Verifies that the patient searched with SSN is displayed......passed
+And Click Show Appointments button and verify...............................passed
+Then Click Show Tests button from an appointment and verify.................passed
+Then Close the application..................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
