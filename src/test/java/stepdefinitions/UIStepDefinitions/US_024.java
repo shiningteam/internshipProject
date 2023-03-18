@@ -7,6 +7,7 @@ import org.junit.Assert;
 import pages.AdminStaffPage;
 import pages.HomePage;
 import pages.SignInPage;
+import pages.StaffMyPagesPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -17,6 +18,7 @@ public class US_024 {
     HomePage homePage = new HomePage();
     SignInPage signInPage = new SignInPage();
     AdminStaffPage adminStaffPage = new AdminStaffPage();
+    StaffMyPagesPage staffMyPagesPage = new StaffMyPagesPage();
 
     @Given("User goes to home page and Sign in with staff credentials")
     public void userGoesToHomePageAndSignInWithStaffCredentials() {
@@ -49,8 +51,11 @@ public class US_024 {
 
     @Then("Verifies that patient's status is COMPLETED")
     public void verifies_that_patient_s_status_is_completed() {
-       clickElementByJS(adminStaffPage.showAppointmentsIcon);
-       ReusableMethods.waitFor(3);
+            ReusableMethods.waitFor(5);
+            clickElementByJS(staffMyPagesPage.showAppointments);
+            ReusableMethods.waitFor(5);
+   //    clickElementByJS(adminStaffPage.showAppointmentsIcon);
+   //    ReusableMethods.waitFor(5);
         Assert.assertEquals( "COMPLETED", adminStaffPage.patientStatusBox.getText());
     }
 

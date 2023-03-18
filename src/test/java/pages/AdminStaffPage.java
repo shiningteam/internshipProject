@@ -23,9 +23,9 @@ public class AdminStaffPage {
   @FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[3]")
   public WebElement  firstNameBox;
 
- @FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]")
-  // @FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[16]//div//a//span[contains(text(),'Show Appointments')]")
-  public WebElement showAppointmentsIcon;
+    //@FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]")    @FindBy(xpath = "//span[contains(text(),'Show Appointments')]")
+    @FindBy(xpath = "//span[contains(text(),'Show Appointments')]")
+     public WebElement showAppointmentsIcon;
 
   @FindBy(xpath = " //table[@class='table']//tbody//tr[1]//td[4]")
   public WebElement patientStatusBox;
@@ -93,6 +93,4 @@ public class AdminStaffPage {
 
     @FindBy(id="jhi-confirm-delete-cTestItem")
     public WebElement deleteConfirmButton;
-
-
 }

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="35.957" tests="2" skipped="0" failures="1" errors="0">
-<testcase classname="TestItem_feature" name="Display the patient searched with SSN" time="24.547">
+<testsuite name="Cucumber" time="41.167" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="TestItem_feature" name="Display the patient searched with SSN" time="24.694">
 <system-out><![CDATA[
 Given User goes to home page and Sign in with staff credentials.............passed
 And Navigate to "search-patient"  page and searches patient with SSN........passed
 Then View and  Verifies that the patient searched with SSN is displayed.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="TestItem_feature" name="Check the invoice process" time="11.164">
-<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]&quot;}
+<testcase classname="TestItem_feature" name="Check the invoice process" time="16.272">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),'Show Appointments')]&quot;}
   (Session info: chrome=111.0.5563.65)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f45fb015f031fbadcb75ef3cf37b5edd, findElement {using=xpath, value=//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\maksa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55047}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55047/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f45fb015f031fbadcb75ef3cf37b5edd">
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]"}
+Command: [db77880fbee1c6b06d50810448d72779, findElement {using=xpath, value=//span[contains(text(),'Show Appointments')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\maksa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57118/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db77880fbee1c6b06d50810448d72779">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Show Appointments')]"}
   (Session info: chrome=111.0.5563.65)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f45fb015f031fbadcb75ef3cf37b5edd, findElement {using=xpath, value=//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\maksa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55047}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55047/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f45fb015f031fbadcb75ef3cf37b5edd
+Command: [db77880fbee1c6b06d50810448d72779, findElement {using=xpath, value=//span[contains(text(),'Show Appointments')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\maksa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57118/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db77880fbee1c6b06d50810448d72779
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -54,7 +54,7 @@ Session ID: f45fb015f031fbadcb75ef3cf37b5edd
 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
 	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:469)
 	at utilities.JSUtils.clickElementByJS(JSUtils.java:11)
-	at stepdefinitions.UIStepDefinitions.US_024.verifies_that_patient_s_status_is_completed(US_024.java:52)
+	at stepdefinitions.UIStepDefinitions.US_024.verifies_that_patient_s_status_is_completed(US_024.java:55)
 	at ✽.Verifies that patient's status is COMPLETED(file:///C:/Users/maksa/IdeaProjects/internshipProject1/./src/test/resources/features/UIFeatures/US_24.feature:14)
 ]]>
 </failure>
