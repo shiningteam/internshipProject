@@ -43,13 +43,15 @@ public class US_024 {
 
     @Then("View and  Verifies that the patient searched with SSN is displayed")
     public void view_and_verifies_that_the_patient_searched_with_ssn_is_displayed() {
-        Assert.assertTrue(adminStaffPage.showAppointmentsIcon.isEnabled());
+        Assert.assertEquals("ShiningPatient", adminStaffPage.firstNameBox.getText());
+        ReusableMethods.waitFor(5);
     }
 
     @Then("Verifies that patient's status is COMPLETED")
     public void verifies_that_patient_s_status_is_completed() {
-         clickElementByJS(adminStaffPage.showAppointmentsIcon);
-         Assert.assertEquals( "COMPLETED", adminStaffPage.patientStatusBox.getText());
+       clickElementByJS(adminStaffPage.showAppointmentsIcon);
+       ReusableMethods.waitFor(3);
+        Assert.assertEquals( "COMPLETED", adminStaffPage.patientStatusBox.getText());
     }
 
 

@@ -50,8 +50,10 @@ public class Hooks {
     }
 
 
-    @Before("Api28")
 
+
+
+    @Before("@US018_ApiTestItem")
 
     public void beforeApi(){
         medunnaSetUp();

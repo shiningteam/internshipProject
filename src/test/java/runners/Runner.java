@@ -16,10 +16,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
 
 
-
-        tags = "@US_002_ApiTest"
-
-
+        tags = "@US24InvoiceProcess"
 
 )
 public class Runner {
