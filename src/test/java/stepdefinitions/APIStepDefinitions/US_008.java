@@ -19,8 +19,10 @@ import static utilities.Authentication.generateToken;
 public class US_008 {
 
     Response response;
+
     US_08_PatientPojo patient = new US_08_PatientPojo("ShiningPatient", "Team","2568898123", "shiningpatient@gmail.com"  );
     US_08_Pojo patientPojo = new US_08_Pojo(5182, patient);
+
     @Given("user sends GET request for the appointment")
     public void user_sends_get_request_for_the_appointment() {
 

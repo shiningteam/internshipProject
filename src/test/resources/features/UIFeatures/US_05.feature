@@ -8,13 +8,14 @@ Feature: Login_feature
     And User tries to login entering "<username>" and "<password>"
     Then Assert that login successful
     Then close application
+
     Examples:test_data
       |  username        |   password      |
       | AdminTeam01      |   Team01+       |
       | ShiningPhysician |Shiningphysician1|
-      | shiningtakım     |  shteam123      |
+      | shiningtakim     |  shteam123      |
       | shiningteamm     |  shteam111      |
-      | shiningtakım     |  shteam111      |
+      | shiningtakim     |  shteam111      |
 
   Scenario Outline: login_cancel_scenario
     And User tries to login entering "<username>" and "<password>"
@@ -24,7 +25,7 @@ Feature: Login_feature
     Examples:test_data
       |  username        |   password      |
       | AdminTeam01      |   shteam123     |
-      | shiningtakım     |  shteam111      |
+      | shiningtakim     |  shteam111      |
 
   Scenario Outline: navigating_registeration_page_scenario
     And User tries to login entering "<username>" and "<password>"

@@ -20,10 +20,14 @@ public class AdminStaffPage {
   @FindBy(xpath = "//input[@ name='ssn']")
   public WebElement searchPatientWithSSN;
 
-  @FindBy(xpath = "//table//tbody//tr[1]//div//a[@class='btn btn-warning btn-sm']")
-  public WebElement showAppointmentsIcon;
+  @FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[3]")
+  public WebElement  firstNameBox;
 
-  @FindBy(xpath = " //table//tbody//tr[1]//td[4]")
+    //@FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[16]//div//a[3]//span//span[contains(text(),'Show Appointments')]")    @FindBy(xpath = "//span[contains(text(),'Show Appointments')]")
+    @FindBy(xpath = "//span[contains(text(),'Show Appointments')]")
+     public WebElement showAppointmentsIcon;
+
+  @FindBy(xpath = " //table[@class='table']//tbody//tr[1]//td[4]")
   public WebElement patientStatusBox;
 
   @FindBy(xpath ="//table[@class='table']//tbody//tr[1]//td[13]//div//a[@class='btn btn-success btn-sm']")
@@ -65,8 +69,9 @@ public class AdminStaffPage {
     @FindBy(id="save-entity")
     public WebElement saveButton;
 
-  @FindBy(xpath = "//*[contains(text(),'Back')]")
-  public WebElement backButton;
+      // @FindBy(xpath = "//*[contains(text(),'Back')]")
+    @FindBy(xpath = "//span[@class='d-none d-md-inline']")
+    public WebElement backButton;
 
     @FindBy(xpath = "//table[@class='table']//tbody//tr[1]//td[8]//div//a[@class='btn btn-info btn-sm']")
     public WebElement viewBox;

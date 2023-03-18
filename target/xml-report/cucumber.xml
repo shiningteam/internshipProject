@@ -1,36 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="125.192" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="Show appointments for patients by Staff" name="TC_01, TC_02, TC_03 Staff edit appointments" time="57.091">
+<testsuite name="Cucumber" time="41.167" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="TestItem_feature" name="Display the patient searched with SSN" time="24.694">
 <system-out><![CDATA[
 Given User goes to home page and Sign in with staff credentials.............passed
 And Navigate to "search-patient"  page and searches patient with SSN........passed
-And View and  Verifies that the patient searched with SSN is displayed......passed
-And Click Show Appointments button and verify...............................passed
-Then Click edit button from an appointment and verify.......................passed
-Then Select the status from dropdown and verify.............................passed
-Then Leave blank Anamnesis, Treatment, Diagnosis and verify.................passed
-Then Close the application..................................................passed
+Then View and  Verifies that the patient searched with SSN is displayed.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="Show appointments for patients by Staff" name="TC_04 Staff can select the current doctor that needs to be selected for the patient" time="34.455">
+<testcase classname="TestItem_feature" name="Check the invoice process" time="16.272">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),'Show Appointments')]&quot;}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db77880fbee1c6b06d50810448d72779, findElement {using=xpath, value=//span[contains(text(),'Show Appointments')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\maksa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57118/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db77880fbee1c6b06d50810448d72779">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Show Appointments')]"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db77880fbee1c6b06d50810448d72779, findElement {using=xpath, value=//span[contains(text(),'Show Appointments')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\maksa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57118/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db77880fbee1c6b06d50810448d72779
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy24.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:469)
+	at utilities.JSUtils.clickElementByJS(JSUtils.java:11)
+	at stepdefinitions.UIStepDefinitions.US_024.verifies_that_patient_s_status_is_completed(US_024.java:55)
+	at ✽.Verifies that patient's status is COMPLETED(file:///C:/Users/maksa/IdeaProjects/internshipProject1/./src/test/resources/features/UIFeatures/US_24.feature:14)
+]]>
+</failure>
 <system-out><![CDATA[
-Given User goes to home page and Sign in with staff credentials.............passed
-And Navigate to "search-patient"  page and searches patient with SSN........passed
-And View and  Verifies that the patient searched with SSN is displayed......passed
-And Click Show Appointments button and verify...............................passed
-Then Click edit button from an appointment and verify.......................passed
-Then Select Physician from dropdown and verify..............................passed
-Then Close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Show appointments for patients by Staff" name="TC_05 Staff can view the patients test results" time="33.308">
-<system-out><![CDATA[
-Given User goes to home page and Sign in with staff credentials.............passed
-And Navigate to "search-patient"  page and searches patient with SSN........passed
-And View and  Verifies that the patient searched with SSN is displayed......passed
-And Click Show Appointments button and verify...............................passed
-Then Click Show Tests button from an appointment and verify.................passed
-Then Close the application..................................................passed
+Then Verifies that patient's status is COMPLETED............................failed
+Then Verifies that all invoice is visible...................................skipped
+Then Verifies  that the invoice sent to the patient is visible..............skipped
+Then Close the application..................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

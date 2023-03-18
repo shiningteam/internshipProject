@@ -75,12 +75,12 @@ public class US_018 {
 
     @Then("Finds the test item to be updated")
     public void findsTheTestItemToBeUpdated() {
-        clickElementByJS(adminStaffPage.backButton);
-        ReusableMethods.waitFor(2);
+//        clickElementByJS(adminStaffPage.backButton);
+//        ReusableMethods.waitFor(2);
         clickElementByJS(adminStaffPage.createdDateButton);
         ReusableMethods.waitFor(2);
         clickElementByJS(adminStaffPage.editBox);
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(5);
     }
 
     @Then("Updates it filling all required fields such as {string}, {string}, {string}, {string}, {string}")
@@ -100,7 +100,7 @@ public class US_018 {
         adminStaffPage.defaultValMaxBox.clear();
         adminStaffPage.defaultValMaxBox.sendKeys(arg4);
         clickElementByJS(adminStaffPage.saveButton);
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
     }
 
     @Then("Verifies that the test item is updated")
@@ -119,9 +119,11 @@ public class US_018 {
 
     @Then("Finds the test item and delete it verify the created test item")
     public void finds_the_test_item_and_delete_it_verify_the_created_test_item() {
-            clickElementByJS(adminStaffPage.deleteBox);
-            ReusableMethods.waitFor(2);
-            clickElementByJS(adminStaffPage.deleteConfirmButton);
+        clickElementByJS(adminStaffPage.createdDateButton);
+        ReusableMethods.waitFor(2);
+        clickElementByJS(adminStaffPage.deleteBox);
+        ReusableMethods.waitFor(2);
+        clickElementByJS(adminStaffPage.deleteConfirmButton);
     }
 
     @Then("Verifies that the test item is deleted")
@@ -138,20 +140,6 @@ public class US_018 {
 
         }
 
+
     }
-
-//    @Then("close application")
-//    public void close_application() {
-//   //         Driver.closeDriver();
-//}
 }
-
-//if (adminStaffPage.testNameToDelete.toString().equals(testName)) {
-//        clickElementByJS(adminStaffPage.editBox);
-//        ReusableMethods.waitFor(2);
-//        } else {
-//
-//        clickElementByJS(adminStaffPage.createdDateButton);
-//        clickElementByJS(adminStaffPage.editBox);
-//        ReusableMethods.waitFor(2);
-//        }

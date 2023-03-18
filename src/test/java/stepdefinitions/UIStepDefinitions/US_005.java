@@ -27,7 +27,7 @@ public class US_005 {
     public void goesToHomePage() {
         Driver.getDriver().get(ConfigReader.getProperty("medunna_url"));
         clickElementByJS(homePage.userButton);
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(3);
     }
 
 
@@ -38,7 +38,7 @@ public class US_005 {
         signInPage.userNameBox.sendKeys(string);
         signInPage.passwordBox.sendKeys(string2);
         clickElementByJS(signInPage.signInButton);
-        ReusableMethods.waitFor(5);
+        ReusableMethods.waitFor(3);
     }
 
 
